@@ -39,21 +39,14 @@ public class App {
 
         System.out.println(cars);
 
-        Collections.sort(cars, new Comparator<Car>() {
-            @Override
-            public int compare(Car o1, Car o2) {
-                return o1.getBrand().compareTo(o2.getBrand());
-            }
-        });
+        Collections.sort(
+                cars,
+                (c1, c2) -> c1.getBrand().compareTo(c2.getBrand())
+        );
 
         System.out.println(cars);
 
-        Collections.sort(cars, new Comparator<Car>() {
-            @Override
-            public int compare(Car o1, Car o2) {
-                return o1.getYear() - o2.getYear();
-            }
-        });
+        Collections.sort(cars, (c1, c2) -> c1.getYear() - c2.getYear());
 
         System.out.println(cars);
 
